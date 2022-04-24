@@ -131,7 +131,6 @@ img.mobileImg {
     font-family: Playfair Display;
     font-weight: 100;
     color: white;
-    font-size: 18px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -178,27 +177,6 @@ img.mobileImg {
     font-family: Gowun Batang;
     font-weight: 200;
     font-size: 16px;
-}
-
-.row-3 .parent{ /**장남장녀, 혼주*/
-    margin-top: 10vh;
-    font-family: Gowun Batang;
-    font-weight: 200;
-    letter-spacing: .1rem;
-    font-size: 17px;  
-    height: 60px;
-    display: block;
-}
-
-.row-3 .friends{ /**친구들용*/
-    margin-top: 12vh;
-    letter-spacing: .1rem;
-    height: 60px;
-    display: none;
-}
-
-.row-3 .friends span{
-    padding: 20px;
 }
 
 
@@ -290,15 +268,14 @@ img.mobileImg {
     text-align: left; 
     margin-top: 14vh;
     width: 60%;
-    height: 60vh;
     min-height: 500px;
 }
 
 .location .directionText h4{
-    color: #A47D7D;
-    font-size: 18px;
-    font-family: Gowun Batang;
-    font-weight: 700;
+    color: #B47979;
+    font-size: 16px;
+    font-family: Roboto;
+    font-weight: 500;
     margin-bottom: 10px;
     margin-top: 35px;
 }
@@ -365,7 +342,6 @@ img.mobileImg {
 .contact{
     position: relative;
     width:60%;
-    height:550px;
     margin: auto; 
 }
 
@@ -378,147 +354,28 @@ img.mobileImg {
 
 .contact .contactInfo{
     position: relative;
-    width: 40%;
+    width: 60%;
     display: inline-block;
     padding:10px;
-    margin-top: 25px;
-}
-
-.contact .contactInfo .menu{
-    padding-top:10px;
-    padding-bottom: 10px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    width: 100%;
-    background-color: #ffe812; /*카카오색*/
-    border-radius: 10px;
-    font-family: Noto Sans KR;
-    color: black;
-    font-size: 14px;
+    margin-top: 2vh;
 }
 
 
 .contact button{
     padding: 12px;
-    width: 100%;
+    width: 80%;
+    max-width: 300px;
     border-radius: 10px;
     border:0px;
-    background-color: E2E2E2;
+    background-color: #ffe812;
     color: black;
-    font-size: 14px;
-}
-
-.contact button:hover{
-    background-color: lightgrey;
-}
-
-
-.collapsible {
-  background-color: #777;
-  color: white;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 15px;
-}
-
-.activeM, .collapsible:hover {
-  background-color: #555;
-}
-
-.content {
-  padding: 0 18px;
-  display: none;
-  overflow: hidden;
-  background-color: #f1f1f1;
-}
-
-/****계좌번호 팝업 메세지****/
-#newPopUp{
-    position: absolute;
-    display: none;
-    width: 80%;
-    max-width: 500px;
-    text-align: left;
-    background-color: white;
-    padding:8%;
-    top:0px;
-    left:12%;
-    z-index: 3;
-    font-family: Noto Sans KR;
-    border: solid lightgrey 1px;;
-    border-radius: 5px;
-    box-sizing: border-box;   
-}
-#newPopUp .title{
-    font-size: 19px;
-    color: lightslategrey;
-    padding-bottom: 8px;
-    padding-top: 8px;
-}
-
-.title span{
-    display: inline-grid;
-}
-
-#newPopUp .title .iconify{
-    background-color: cornflowerblue;
-    padding:13px;
-    border-radius: 50%;
-    color: white;
-    float:left;
-}
-
-#newPopUp .bank{
-    padding: 10px;
-    border:solid lightgrey 1px;
+    font-size: 13px;
     margin-top: 10px;
-    border-radius: 10px
-}
-#newPopUp span{
-    top: 10px;
-    display: inline-block;
-    /*display: inline-block;
-    float: left;*/
-}
-
-#newPopUp .name{
-    width: 35%;
-    font-size: 14px;
-    color: grey;
-}
-
-#newPopUp .account{
-    width: 60%;
-    font-size: 14px;
-    color: dimgrey;
-}
-
-#newPopUp .closeButton{
-    background-color:cornflowerblue;
-    padding: 15px;
-    text-align: center;
-    color: white;
-    width: 90%;
-    margin-top: 20px;
-    border-radius: 5px;
+    font-family: Noto Sans KR;
 }
 
 
-#grayout {
-   position: fixed;
-   left: 0px;
-   top: 0px;
-   height: 100%;
-   width: 100%;
-   background-color: black;
-   opacity: 0.5;
-   z-index: 2;
-   display: none;
-}
+
 
 /****** footer
 ******************/
@@ -655,7 +512,7 @@ mobile interface
     
     .location {
         margin-top: 2vh;
-        margin-bottom: 0vh;
+        margin-bottom: 1vh;
     }
     .location .address {
         width: 100%;
@@ -668,7 +525,6 @@ mobile interface
     
     
     .location .directionText h4{
-        color: #A47D7D;
         font-size: clamp(14px, 5vw, 18px);
     }
 
@@ -678,7 +534,7 @@ mobile interface
     
     
     
-/********팬다 요청 예물샷************/
+/********팬다 예물샷************/
     .timeAndMore{
         width: 100%;
         height: 22vh;
@@ -716,14 +572,6 @@ mobile interface
         object-position: 50% 60%;
     }
 
-
-    /****pop up****/
-    #newPopUp{
-        padding: 5%;
-        left:5%;
-        width: 90%;
-    }
-    
 
     /*****CONTACT*****/
     .contact{

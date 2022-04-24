@@ -20,7 +20,7 @@ function reveal() {
     var windowHeight = window.innerHeight;
     var elementTop = reveals[i].getBoundingClientRect().top;
       
-    var elementVisible = 150;
+    var elementVisible = 100;
 
     if (elementTop < windowHeight - elementVisible) {
       reveals[i].classList.add("active");
@@ -71,40 +71,6 @@ function myFunction() {
     text = "You canceled!";
   }
   document.getElementById("demo").innerHTML = text;
-}
-
-
-/***Collapse Menu****/
-var coll = document.getElementsByClassName("collapsible");
-var i;
-
-for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function() {
-    this.classList.toggle("activeM");
-    var content = this.nextElementSibling;
-    if (content.style.display === "block") {
-      content.style.display = "none";
-    } else {
-      content.style.display = "block";
-    }
-  });
-}
-
-function PopUp(){ 
-   // document.write("Hello World!");
-    var popUpM = document.getElementById("newPopUp");
-    popUpM.style.display = "block";
-    
-    var grayOut = document.getElementById("grayout");
-    grayOut.style.display = "block";    
-}
-
-function Close(){
-    var popUpM = document.getElementById("newPopUp");
-    popUpM.style.display = "none"; 
-    
-    var grayOut = document.getElementById("grayout");
-    grayOut.style.display = "none";
 }
 
 

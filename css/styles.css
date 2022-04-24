@@ -1,0 +1,744 @@
+/*
+font-family: 'Libre Baskerville', serif;
+font-family: 'Whisper', cursive;
+font-family: 'Nanum Myeongjo', serif;
+font-family: 'Noto Sans KR', sans-serif;
+font-family: 'Noto Serif KR', serif;
+font-family: 'Gowun Batang', serif;
+*/
+
+@font-face {
+   font-family: Juliette;
+   src: url(text/Juliette.ttf);
+}
+
+*{
+    margin: 0px;
+}
+
+/**** main container
+******************/
+.container {
+    width: 100%;
+    min-height: 100vh;
+    padding-left: 8%;
+    padding-right: 8%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/**** nav bar *****
+******************/
+.navbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding-top: 3vh;
+    background-color: white;
+    padding-bottom: 10px;
+    opacity: 0.8;
+    position: fixed;
+    z-index: 2;
+}
+
+.navbar i { /*hide the hamburger menu icon*/
+    display: none;
+}
+
+nav {
+    flex:1;
+    text-align: right;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 30px;
+    font-family: sans-serif;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 14px;
+    color: #000;
+}
+
+nav ul li a:hover {
+    color: #A47D7D;
+}
+
+/** top row: title
+******************/
+.row {
+    text-align: center;
+    padding-bottom: 3vh;
+    padding-top: 5vh;
+}
+
+.row .titleText{
+    width: 50%;
+}
+
+.row h5 { /*text: for the wedding*/
+    font-family:  Libre Baskerville;
+    color: #9B9B9B;
+    font-weight: lighter;
+    letter-spacing: .2rem;
+    margin-top: 15px;
+    font-size: clamp(16px, 2.5vw, 20px);
+}
+
+.row h4 { /*our name*/
+    color: #6B6B6B;
+    font-weight: normal;
+    font-size: 15px;
+    letter-spacing: .07rem;
+    margin: 0px;    
+}
+
+
+/** first row: image
+******************/
+.row-1 {
+    text-align: center;
+}
+
+.row-1 h4 { /*date*/
+    font-weight: 100;
+    padding: 5px;
+    font-family: Playfair Display;
+    letter-spacing: .07rem;
+}
+
+img.desktopImg{
+    display: block;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+img.mobileImg {
+    display: none;
+}
+
+/******date******/
+.date{
+    background-color: #A88E8E;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center;
+    width: 70%;
+    font-family: Playfair Display;
+    font-weight: 100;
+    color: white;
+    font-size: 18px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/***** text intro
+******************/
+.row-2 {
+    padding-top: 20vh;
+    padding-bottom: 5vh;
+    text-align: center;
+    height: 8vh;
+}
+
+
+.row-2 .text { /* 서로의분위기 text*/
+    font-family: Noto Serif KR;
+    font-weight: 400;
+    font-size: clamp(16px, 4.5vw, 30px);
+}
+
+.reveal{
+    position: relative;
+    transform: translateY(150x);
+    opacity: 0;
+    transition: 2s all ease;
+    padding: 0px;
+}
+
+.reveal.active{
+    transform: translateY(0);
+    opacity: 1;
+    height:100px
+}
+
+.row-3 {
+    padding: 50px;
+    width: 400px;
+    margin-top: 15x;
+    margin-bottom: 17vh;
+    text-align: center;
+}
+
+.row-3 p {
+    font-family: Gowun Batang;
+    font-weight: 200;
+    font-size: 16px;
+}
+
+.row-3 .parent{ /**장남장녀, 혼주*/
+    margin-top: 10vh;
+    font-family: Gowun Batang;
+    font-weight: 200;
+    letter-spacing: .1rem;
+    font-size: 17px;  
+    height: 60px;
+    display: block;
+}
+
+.row-3 .friends{ /**친구들용*/
+    margin-top: 12vh;
+    letter-spacing: .1rem;
+    height: 60px;
+    display: none;
+}
+
+.row-3 .friends span{
+    padding: 20px;
+}
+
+
+
+
+/****** gallery
+******************/
+.gal {
+    margin-bottom: 22vh;
+}
+
+.gal h3 {
+    font-family: Libre Baskerville;
+    letter-spacing: .1rem;
+    color: #BBBBBB;
+    font-weight: 300;
+}
+
+.gal .galleryView{
+    width: 700px;
+}
+
+.gal #smallImg{
+    width: 225px;
+    height: 225px;
+    object-fit: cover; 
+}
+
+
+/****** location
+******************/
+
+.location {
+    margin-top: 2vh;
+    margin-bottom: 4vh;
+}
+
+.location h3 {
+    font-family: Libre Baskerville;
+    letter-spacing: .1rem;
+    color: #BBBBBB;
+    font-weight: 300;
+}
+    
+.location .hotel {
+    width: 60%;
+    margin-top: 20px;
+}
+    
+.location .address {
+    text-align: left;
+    width: 60%;
+    padding-top: 20px;
+    padding-left: 3%;
+    margin: auto;
+    font-family: Roboto;
+    color:#222222;
+    font-size: 17px;
+}
+    
+.location .address li {
+    list-style-type: none;
+    padding-top:9px;
+}
+    
+.location .text a {
+    text-decoration: none;
+    color: #1A73E8; 
+}
+    
+.location .iconify {
+    color: #1A73E8; 
+}
+
+.location .direction a{
+    padding: 18px;
+    margin-right: 2%;
+    border: solid lightgrey 1px;
+    border-radius: 30px;
+    background-color: white;
+    color: grey;
+    font-family: Roboto;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+
+.location .directionText{
+    text-align: left; 
+    margin-top: 14vh;
+    width: 60%;
+    height: 60vh;
+    min-height: 500px;
+}
+
+.location .directionText h4{
+    color: #A47D7D;
+    font-size: 18px;
+    font-family: Gowun Batang;
+    font-weight: 700;
+    margin-bottom: 10px;
+    margin-top: 35px;
+}
+
+.location .directionText li{
+    list-style: none;
+    font-family: Noto Sans KR;
+    font-size: 14px;
+    color: grey;  
+}
+
+
+
+/********ceremonyTime 예물샷************/
+.timeAndMore{
+    width: 100%;
+    height: 45vh;
+    min-height: 180px;
+    max-height: 400px;
+    background-color: #3E3D3D;
+    margin-bottom: 10vh;
+}
+
+.timeAndMore div {
+    display: inline-block;
+    float:right;
+    height: 45vh;
+}
+
+.timeAndMore .leftText{
+    width: 60%;
+    text-align: right;
+    padding-top: 7vh;
+    padding-bottom: 7vh;
+    box-sizing: border-box;
+    color: white;
+    max-width: 500px;
+}
+
+.timeAndMore .leftText img{
+    width: 100%;
+    max-width: 380px;
+    float: left;
+}
+
+.timeAndMore .rigntImage{
+    width: 33%;
+    float: right;
+}
+
+.timeAndMore .rigntImage img{
+    width: 100%;
+    height: 45vh;
+    min-height: 180px;
+    max-height: 400px;
+    object-fit: cover;
+    object-position: 50% 70%;
+}
+
+
+
+
+/*****CONTACT*****/
+.contact{
+    position: relative;
+    width:60%;
+    height:550px;
+    margin: auto; 
+}
+
+.contact h3 {
+    font-family: Libre Baskerville;
+    letter-spacing: .1rem;
+    color: #BBBBBB;
+    font-weight: 300;
+}
+
+.contact .contactInfo{
+    position: relative;
+    width: 40%;
+    display: inline-block;
+    padding:10px;
+    margin-top: 25px;
+}
+
+.contact .contactInfo .menu{
+    padding-top:10px;
+    padding-bottom: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    background-color: #ffe812; /*카카오색*/
+    border-radius: 10px;
+    font-family: Noto Sans KR;
+    color: black;
+    font-size: 14px;
+}
+
+
+.contact button{
+    padding: 12px;
+    width: 100%;
+    border-radius: 10px;
+    border:0px;
+    background-color: E2E2E2;
+    color: black;
+    font-size: 14px;
+}
+
+.contact button:hover{
+    background-color: lightgrey;
+}
+
+
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.activeM, .collapsible:hover {
+  background-color: #555;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+
+/****계좌번호 팝업 메세지****/
+#newPopUp{
+    position: absolute;
+    display: none;
+    width: 80%;
+    max-width: 500px;
+    text-align: left;
+    background-color: white;
+    padding:8%;
+    top:0px;
+    left:12%;
+    z-index: 3;
+    font-family: Noto Sans KR;
+    border: solid lightgrey 1px;;
+    border-radius: 5px;
+    box-sizing: border-box;   
+}
+#newPopUp .title{
+    font-size: 19px;
+    color: lightslategrey;
+    padding-bottom: 8px;
+    padding-top: 8px;
+}
+
+.title span{
+    display: inline-grid;
+}
+
+#newPopUp .title .iconify{
+    background-color: cornflowerblue;
+    padding:13px;
+    border-radius: 50%;
+    color: white;
+    float:left;
+}
+
+#newPopUp .bank{
+    padding: 10px;
+    border:solid lightgrey 1px;
+    margin-top: 10px;
+    border-radius: 10px
+}
+#newPopUp span{
+    top: 10px;
+    display: inline-block;
+    /*display: inline-block;
+    float: left;*/
+}
+
+#newPopUp .name{
+    width: 35%;
+    font-size: 14px;
+    color: grey;
+}
+
+#newPopUp .account{
+    width: 60%;
+    font-size: 14px;
+    color: dimgrey;
+}
+
+#newPopUp .closeButton{
+    background-color:cornflowerblue;
+    padding: 15px;
+    text-align: center;
+    color: white;
+    width: 90%;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+
+#grayout {
+   position: fixed;
+   left: 0px;
+   top: 0px;
+   height: 100%;
+   width: 100%;
+   background-color: black;
+   opacity: 0.5;
+   z-index: 2;
+   display: none;
+}
+
+/****** footer
+******************/
+footer {
+    background-color: #222222;
+    color: white;
+    padding-left: 10%;
+    padding-top: 30px;
+    padding-bottom: 200px;
+    font-family: Roboto;
+    font-weight: 200;
+    font-size: 13px;
+}
+
+
+
+
+
+
+/*****************
+******************
+mobile interface
+*****************
+*****************/
+
+@media only screen and (max-width: 700px){
+    
+    /*menu for mobile*/
+    .navbar{
+        padding: 0px;
+    }
+    
+    nav ul{
+        width: 100%;
+        position: fixed;
+        right: 0;
+        top:0;
+        z-index: 2;      
+    }
+    
+    .menuBlock{
+        padding-top: 5px;
+        padding-bottom: 5px; 
+        background-color: #BEB2B2;
+        text-align: center;
+    }
+    nav ul li{
+        display: inline-block;
+        margin: 20px;
+    }
+    
+    nav ul li a{
+        color: white;
+        font-size: 14px;
+    } 
+    
+    .navbar i{
+        cursor: pointer;
+        display: block;
+    }
+    
+    #menuList{
+       /* overflow: hidden;*/
+       /* transition: 0.5s;*/
+        display: none;
+    }
+    
+    /*mobile main page*/
+    .row{ /*title row*/
+        width: 100%;
+        margin-top:5vh;
+        margin-bottom: 2vh;
+    }
+    .row .titleText{
+        width: 90%;
+    }
+    
+    .row-1{ /*main image for mobile*/
+        max-height: 80vh;
+        overflow: hidden;
+    }
+    
+    img.mobileImg{
+        display: block;
+        width: 100%;
+        object-fit: cover;
+        object-position: 50% 50%; /*default value center*/      
+    }
+    
+    img.desktopImg{
+        display: none;
+    }
+    
+    /******date******/
+    .date{
+        background-color: #BEAAAA;
+        padding-top: 4vh;
+        padding-bottom: 4vh;
+        font-family: Libre Baskerville;
+        font-size: 12px;
+        font-weight: lighter;
+        width: 100%;
+    }
+    
+    
+    .row-2 {
+        padding-top: 15vh;
+        padding-bottom: 3vh;
+    }
+    
+    .row-3{
+        width: 320px;
+        padding:10px;
+    }
+    
+    .row-3 p {
+    font-size: 4vw;
+    }
+    
+    /***gallery*/
+    .gal .galleryView{
+        width: 100%;
+    /*height: 410px;
+       /**things to do: view more button*/
+    }
+    .gal #smallImg{
+        width: 100px;
+        height: 100px;
+        object-fit: cover; 
+    }
+    
+    
+    /*location*/
+    
+    .location {
+        margin-top: 2vh;
+        margin-bottom: 0vh;
+    }
+    .location .address {
+        width: 100%;
+        padding-left: 0px;
+    }
+    
+    .location .directionText{
+        width: 100%;
+    }
+    
+    
+    .location .directionText h4{
+        color: #A47D7D;
+        font-size: clamp(14px, 5vw, 18px);
+    }
+
+    .location .directionText li{
+        font-size: clamp(14px, 3.5vw, 16px);
+    }
+    
+    
+    
+/********팬다 요청 예물샷************/
+    .timeAndMore{
+        width: 100%;
+        height: 22vh;
+    }
+
+    .timeAndMore div{
+        display: inline-block;
+        float:left;
+        height: 22vh;
+    }
+
+    .timeAndMore .leftText{
+        width: 62%;
+        padding-left: 5%;
+        padding-top: 4vh;
+        padding-bottom: 4vh;
+        box-sizing: border-box; 
+        overflow: hidden;
+    }
+    
+    
+   .timeAndMore .leftText img{
+        width: 95%;   
+    }
+
+    .timeAndMore .rigntImage{
+        width: 35%;
+        float: right;   
+    }
+
+    .timeAndMore .rigntImage img{
+        width: 100%;
+        height: 22vh;
+        object-fit: cover;
+        object-position: 50% 60%;
+    }
+
+
+    /****pop up****/
+    #newPopUp{
+        padding: 5%;
+        left:5%;
+        width: 90%;
+    }
+    
+
+    /*****CONTACT*****/
+    .contact{
+        width:100%;
+    }
+
+    .contact .contactInfo{
+        position: relative;
+        width: 70%;
+    }
+    
+    
+
+
+}
+
+
+

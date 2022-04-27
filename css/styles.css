@@ -69,26 +69,17 @@ nav ul li a:hover {
 
 /** top row: title
 ******************/
-.row {
+.row-1 {
     text-align: center;
     padding-bottom: 3vh;
     padding-top: 5vh;
 }
 
-.row .titleText{
+.row-1 .titleText{
     width: 50%;
 }
 
-.row h5 { /*text: for the wedding*/
-    font-family:  Libre Baskerville;
-    color: #9B9B9B;
-    font-weight: lighter;
-    letter-spacing: .2rem;
-    margin-top: 15px;
-    font-size: clamp(16px, 2.5vw, 20px);
-}
-
-.row h4 { /*our name*/
+.row-1 h4 { /*our name*/
     color: #6B6B6B;
     font-weight: normal;
     font-size: 15px;
@@ -99,16 +90,6 @@ nav ul li a:hover {
 
 /** first row: image
 ******************/
-.row-1 {
-    text-align: center;
-}
-
-.row-1 h4 { /*date*/
-    font-weight: 100;
-    padding: 5px;
-    font-family: Playfair Display;
-    letter-spacing: .07rem;
-}
 
 img.desktopImg{
     display: block;
@@ -458,18 +439,14 @@ mobile interface
     }
     
     /*mobile main page*/
-    .row{ /*title row*/
+    .row-1{ /*title row*/
         width: 100%;
-        margin-top:5vh;
+        margin-top: 2vh;
         margin-bottom: 2vh;
     }
-    .row .titleText{
-        width: 90%;
-    }
     
-    .row-1{ /*main image for mobile*/
-        max-height: 80vh;
-        overflow: hidden;
+    .row-1 .titleText{
+        width: 90%;
     }
     
     img.mobileImg{
@@ -526,7 +503,7 @@ mobile interface
     
     .location {
         margin-top: 2vh;
-        margin-bottom: 1vh;
+        margin-bottom: 2vh;
     }
     .location .address {
         width: 100%;
@@ -600,9 +577,6 @@ mobile interface
         position: relative;
         width: 70%;
     }
-    
-    
-
 
 }
 

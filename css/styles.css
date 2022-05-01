@@ -7,10 +7,13 @@ font-family: 'Noto Serif KR', serif;
 font-family: 'Gowun Batang', serif;
 */
 
+
 @font-face {
    font-family: Juliette;
    src: url(text/Juliette.ttf);
 }
+
+
 
 *{
     margin: 0px;
@@ -20,7 +23,6 @@ font-family: 'Gowun Batang', serif;
 ******************/
 .container {
     width: 100%;
-    min-height: 100vh;
     padding-left: 8%;
     padding-right: 8%;
     box-sizing: border-box;

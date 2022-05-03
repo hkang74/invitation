@@ -229,7 +229,7 @@
     </div>
         <div class="leftText">
         <!---TO DO: make the link clickable, and sent me an email-->
-        <img src="image/timeText.png"><br>
+            <img src="image/timeText.png"><br>
     </div>
 </div>     
 
@@ -239,14 +239,14 @@
  <section class="contact">
     <h3>CONTACT</h3><br>
      
-    <div class="contactInfo">
+    <div class="contactInfo" id="contact">
         <button type="button"><img src="image/kakaoTalk.png" width="20px"> 신랑에게 연락하기</button>
-         <button type="button"><img src="image/kakaoTalk.png" width="20px"> 신부에게 연락하기</button>
+         <button type="button"><img src="image/kakaoTalk.png" width="20px" onclick="sendMail()"> 신부에게 연락하기</button>
      </div> 
      <br><br><br>
         <span style="font-family: Noto Serif KR; font-size:15px;"> 
          축의금은 받지 않습니다.<br>
-         축하해주시는 마음만 감사히 받겠습니다. </span> 
+         축하해주시는 마음만 감사히 받겠습니다. </span>
      <br><br><br><br><br><br><br>
 </section>
           
@@ -256,6 +256,8 @@
     
 <!----js scripts----->
     <script type="text/javascript" src="js/script.js"> </script>
+    <script src="https://smtpjs.com/v3/smtp.js">
+    </script>
 </body>
     
 

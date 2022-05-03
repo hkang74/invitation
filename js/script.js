@@ -82,3 +82,84 @@ function copyToClipboard() {
   alert("1234567 Copied");
 }
 
+
+function sendMail() {
+    Email.send({
+            Host: "smtp.gmail.com",
+            Username: "khj43966@gmail.com",
+            Password: "hoseok08",
+            To: "khj4396@gmail.com",
+            From: "khj43966@gmail.com",
+            Subject: "Sending Email using javascript",
+            Body: "Well that was easy!!",
+      })
+        .then(function (message) {
+          alert("mail sent successfully")
+        });
+}
+
+
+
+
+
+//for zoom detection
+
+px_ratio = window.devicePixelRatio || window.screen.availWidth / document.documentElement.clientWidth;
+
+var zoomNumber = 0;
+
+function isZooming(){
+    var newPx_ratio = window.devicePixelRatio || window.screen.availWidth / document.documentElement.clientWidth;
+    var y = window.scrollY;
+    
+    if(y >3000 && y <=5000){
+        if(newPx_ratio != px_ratio){
+            px_ratio = newPx_ratio;    
+            return true;
+        }else{
+            zoomNumber++;
+            console.log("zooming"+zoomNumber);
+            return false;
+        }
+    }
+    if(y>3200 && zoomNumber>= 1){
+       
+    }
+}
+window.visualViewport.addEventListener("resize", isZooming);
+
+
+
+var emailSent = 0;
+
+function trackDoc() {
+    var userDocument = document.getElementById("contact");
+    var windowHeight = window.innerHeight;
+    var elementTop = userDocument.getBoundingClientRect().top;     
+    var elementVisible = 0;
+
+    if ((elementTop < windowHeight - elementVisible) && (zoomNumber >= 1)) {   
+    
+        if(emailSent==0){
+         
+         console.log("sending an email");
+         Email.send({
+            Host: "smtp.gmail.com",
+            Username: "khj43966@gmail.com",
+            Password: "hoseok08",
+            To: "khj4396@gmail.com",
+            From: "khj43966@gmail.com",
+            Subject: "Sending Email using javascript",
+            Body: "someone was zooming" + zoomNumber, })
+             .then(function (message) {
+            alert("you zoomed " + zoomNumber +" times")
+            });
+        emailSent = 1;
+       } 
+     } 
+  }
+window.addEventListener("scroll", trackDoc);
+
+
+
+

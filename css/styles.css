@@ -34,9 +34,9 @@ font-family: 'Gowun Batang', serif;
     width: 100%;
     display: flex;
     align-items: center;
-    padding-top: 3vh;
+    padding-top: 18px;
     background-color: white;
-    padding-bottom: 10px;
+    padding-bottom: 12px;
     opacity: 0.8;
     position: fixed;
     z-index: 2;
@@ -72,9 +72,13 @@ nav ul li a:hover {
 ******************/
 .row-1 {
     text-align: center;
-    padding-bottom: 3vh;
-    padding-top: 5vh;
+    margin-top: 60px;
+    margin-bottom: 20px;
 }
+
+
+
+
 
 .row-1 .titleText{
     width: 50%;
@@ -255,14 +259,14 @@ img.mobileImg {
 
 
 .location .menus .button_m button:hover{
-    border: solid grey;
+    border: solid grey 1px;
 }
 
 
 .location .direction{
     text-align: left; 
-    margin-top: 10vh;
-    margin-bottom: 12vh;
+    margin-top: 70px;
+    margin-bottom: 70px;
     width: 100%;
     max-width: 700px;
 }
@@ -288,24 +292,24 @@ img.mobileImg {
 /********ceremonyTime 예물샷************/
 .timeAndMore{
     width: 100%;
-    height: 45vh;
+    height: 320px;
     min-height: 180px;
     max-height: 400px;
     background-color: #3E3D3D;
-    margin-bottom: 10vh;
+    margin-bottom: 80px;
 }
 
 .timeAndMore div {
     display: inline-block;
     float:right;
-    height: 45vh;
+    height: 320px;
 }
 
 .timeAndMore .leftText{
     width: 60%;
     text-align: right;
-    padding-top: 7vh;
-    padding-bottom: 7vh;
+    padding-top: 50px;
+    padding-bottom: 50px;
     box-sizing: border-box;
     color: white;
     max-width: 500px;
@@ -324,7 +328,7 @@ img.mobileImg {
 
 .timeAndMore .rigntImage img{
     width: 100%;
-    height: 45vh;
+    height: 320px;
     min-height: 180px;
     max-height: 400px;
     object-fit: cover;
@@ -353,7 +357,7 @@ img.mobileImg {
     width: 60%;
     display: inline-block;
     padding:10px;
-    margin-top: 2vh;
+    margin-top: 10px;
 }
 
 
@@ -369,8 +373,6 @@ img.mobileImg {
     margin-top: 10px;
     font-family: Noto Sans KR;
 }
-
-
 
 
 /****** footer
@@ -442,8 +444,8 @@ mobile interface
     /*mobile main page*/
     .row-1{ /*title row*/
         width: 100%;
-        margin-top: 2vh;
-        margin-bottom: 2vh;
+        margin-top: 40px;
+        margin-bottom: 25px;
     }
     
     .row-1 .titleText{
@@ -464,8 +466,8 @@ mobile interface
     /******date******/
     .date{
         background-color: #BEAAAA;
-        padding-top: 4vh;
-        padding-bottom: 4vh;
+        padding-top: 32px;
+        padding-bottom: 32px;
         font-family: Libre Baskerville;
         font-size: 12px;
         font-weight: lighter;
@@ -503,8 +505,8 @@ mobile interface
     /*location*/
     
     .location {
-        margin-top: 2vh;
-        margin-bottom: 2vh;
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
     .location .address {
         width: 100%;
@@ -533,20 +535,20 @@ mobile interface
 /********팬다 예물샷************/
     .timeAndMore{
         width: 100%;
-        height: 22vh;
+        height: 130px;
     }
 
     .timeAndMore div{
         display: inline-block;
         float:left;
-        height: 22vh;
+        height: ;
     }
 
     .timeAndMore .leftText{
         width: 62%;
         padding-left: 5%;
-        padding-top: 4vh;
-        padding-bottom: 4vh;
+        padding-top: 20px;
+        padding-bottom: 10px;
         box-sizing: border-box; 
         overflow: hidden;
     }
@@ -563,7 +565,7 @@ mobile interface
 
     .timeAndMore .rigntImage img{
         width: 100%;
-        height: 22vh;
+        height: 130px;
         object-fit: cover;
         object-position: 50% 60%;
     }

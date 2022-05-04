@@ -93,8 +93,7 @@ function isZooming(){
     var newPx_ratio = window.devicePixelRatio || window.screen.availWidth / document.documentElement.clientWidth;
     var y = window.scrollY;
     
-    if(y > (window.innerHeight/6.0)*5.0 && 
-       y <= window.innerHeight){
+    if(y >3000 && y <=5000){
         if(newPx_ratio != px_ratio){
             px_ratio = newPx_ratio;    
             return true;
@@ -102,6 +101,9 @@ function isZooming(){
             zoomNumber++;
             return false;
         }
+    }
+    if(y>3200 && zoomNumber>= 1){
+       
     }
 }
 window.visualViewport.addEventListener("resize", isZooming);
@@ -121,30 +123,14 @@ function trackDoc() {
         if(emailSent==0){    
         var newForm = document.getElementById("contact-form");
    
-        newForm.message.value = "you zoomed " + zoomNumber + " times";
-           
-            /*
+            newForm.message.value = "you zoomed " + zoomNumber + " times";
             emailjs.sendForm('service_13lxdni', 'template_0ojbuut', newForm)
     
         .then(function(res) {
             console.log('SUCCESS!', res.status);
             }, function(error) {
             console.log('FAILED...', error);
-            });    */
-             
-        /*    
-        Email.send({
-            Host : "smtp.gmail.com",
-            Username : "khj43966@gmail.com",
-            Password : "hoseok08",
-            To : 'khj43966@gmail.com',
-            From : "khj43966@gmail.com",
-            Subject : "This is the subject",
-            Body : "And this is the body"
-            }).then(
-            message => alert("you zoomed " + zoomNumber +" times")
-            );    */
-               
+            });            
         emailSent = 1;
        } 
      } 

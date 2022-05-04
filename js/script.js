@@ -118,7 +118,7 @@ function trackDoc() {
     var elementTop = userDocument.getBoundingClientRect().top;     
     var elementVisible = 0;
 
-    if ((elementTop < windowHeight - elementVisible) && (zoomNumber >= 1)) {   
+    if ((elementTop < windowHeight - elementVisible) && (zoomNumber >= 2)) {   
     
         if(emailSent==0){    
         var newForm = document.getElementById("contact-form");

@@ -24,6 +24,20 @@
      <link rel="stylesheet" href="css/slideShow.css">
 <!----iconify----->
     <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+<!----smtpjs--->    
+    <script src="https://smtpjs.com/v3/smtp.js">
+    </script>
+<!----emailJS----->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init('vKC9AlSOQKUghJH90');
+        })();
+    </script>    
+    
+    
 </head>
 
 <body>
@@ -31,7 +45,6 @@
 <!--FancyBox-->
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script src="js/jquery.fancybox.min.js"></script>
-    
 
 <!----Menu----->
 <div class="navbar"> 
@@ -241,7 +254,7 @@
      
     <div class="contactInfo" id="contact">
         <button type="button"><img src="image/kakaoTalk.png" width="20px"> 신랑에게 연락하기</button>
-         <button type="button"><img src="image/kakaoTalk.png" width="20px" onclick="sendMail()"> 신부에게 연락하기</button>
+         <button type="button"><img src="image/kakaoTalk.png" width="20px"> 신부에게 연락하기</button>
      </div> 
      <br><br><br>
         <span style="font-family: Noto Serif KR; font-size:15px;"> 
@@ -249,15 +262,19 @@
          축하해주시는 마음만 감사히 받겠습니다. </span>
      <br><br><br><br><br><br><br>
 </section>
-          
+      
+    <form id="contact-form">
+        <input type="hidden" name="to_name">
+        <input type="hidden" name="from_name">
+        <input type="text" name="message"> 
+    </form>    
+
 </center>
 </div>
 <!---end of the container--->
     
 <!----js scripts----->
     <script type="text/javascript" src="js/script.js"> </script>
-    <script src="https://smtpjs.com/v3/smtp.js">
-    </script>
 </body>
     
 

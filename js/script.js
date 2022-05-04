@@ -83,27 +83,8 @@ function copyToClipboard() {
 }
 
 
-function sendMail() {
-    Email.send({
-            Host: "smtp.gmail.com",
-            Username: "khj43966@gmail.com",
-            Password: "hoseok08",
-            To: "khj4396@gmail.com",
-            From: "khj43966@gmail.com",
-            Subject: "Sending Email using javascript",
-            Body: "Well that was easy!!",
-      })
-        .then(function (message) {
-          alert("mail sent successfully")
-        });
-}
-
-
-
-
 
 //for zoom detection
-
 px_ratio = window.devicePixelRatio || window.screen.availWidth / document.documentElement.clientWidth;
 
 var zoomNumber = 0;
@@ -118,7 +99,6 @@ function isZooming(){
             return true;
         }else{
             zoomNumber++;
-            console.log("zooming"+zoomNumber);
             return false;
         }
     }
@@ -143,22 +123,53 @@ function trackDoc() {
         if(emailSent==0){
          
          console.log("sending an email");
-         Email.send({
-            Host: "smtp.gmail.com",
-            Username: "khj43966@gmail.com",
-            Password: "hoseok08",
-            To: "khj4396@gmail.com",
-            From: "khj43966@gmail.com",
-            Subject: "Sending Email using javascript",
-            Body: "someone was zooming" + zoomNumber, })
-             .then(function (message) {
-            alert("you zoomed " + zoomNumber +" times")
-            });
+        
+        var newForm = document.getElementById("contact-form");
+   
+            newForm.message.value = "you zoomed " + zoomNumber + " times";
+            emailjs.sendForm('service_13lxdni', 'template_0ojbuut', newForm)
+    
+        .then(function(res) {
+            console.log('SUCCESS!', res.status);
+            }, function(error) {
+            console.log('FAILED...', error);
+            });    
+             
+        /*    
+        Email.send({
+            Host : "smtp.gmail.com",
+            Username : "khj43966@gmail.com",
+            Password : "hoseok08",
+            To : 'khj43966@gmail.com',
+            From : "khj43966@gmail.com",
+            Subject : "This is the subject",
+            Body : "And this is the body"
+            }).then(
+            message => alert("you zoomed " + zoomNumber +" times")
+            );    */
+            
+     
         emailSent = 1;
        } 
      } 
   }
 window.addEventListener("scroll", trackDoc);
+
+
+
+function sendMail() {
+    var newForm = document.getElementById("contact-form");
+   
+    newForm.message.value = "number " + zoomNumber;
+    emailjs.sendForm('service_13lxdni', 'template_0ojbuut', newForm)
+    
+    .then(function(res) {
+         console.log('SUCCESS!', res.status);
+    }, function(error) {
+        console.log('FAILED...', error);
+    });
+    
+}
 
 
 

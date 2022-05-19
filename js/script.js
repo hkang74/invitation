@@ -84,7 +84,7 @@ function copyToClipboard() {
 
 
 
-//for zoom detection
+//zoom 
 px_ratio = window.devicePixelRatio || window.screen.availWidth / document.documentElement.clientWidth;
 
 var zoomNumber = 0;
@@ -107,36 +107,6 @@ function isZooming(){
     }
 }
 window.visualViewport.addEventListener("resize", isZooming);
-
-
-
-var emailSent = 0;
-
-function trackDoc() {
-    var userDocument = document.getElementById("contact");
-    var windowHeight = window.innerHeight;
-    var elementTop = userDocument.getBoundingClientRect().top;     
-    var elementVisible = 0;
-
-    if ((elementTop < windowHeight - elementVisible) && (zoomNumber >= 2)) {   
-    
-        if(emailSent==0){    
-        var newForm = document.getElementById("contact-form");
-   
-            newForm.message.value = "you zoomed " + zoomNumber + " times";
-            emailjs.sendForm('service_13lxdni', 'template_0ojbuut', newForm)
-    
-        .then(function(res) {
-            console.log('SUCCESS!', res.status);
-            }, function(error) {
-            console.log('FAILED...', error);
-            });            
-        emailSent = 1;
-       } 
-     } 
-  }
-window.addEventListener("scroll", trackDoc);
-
 
 
 function sendMail() {
